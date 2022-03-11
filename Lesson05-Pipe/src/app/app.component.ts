@@ -12,4 +12,23 @@ export class AppComponent {
   public names :string[]=['aaa','bbb','ccc'];
   public amountMoney:number = 75.8;
   public today: Date = new Date();
+  public products : any[]=[
+    {
+      id: 1,
+      name: 'bass'
+    },
+    {
+      id: 2,
+      name: 'Peek'
+    },
+    {
+      id: 3,
+      name: 'Snackhead'
+    }
+  ]
+  public product : any = {
+    id: 1,
+    name: 'bass' 
+  }
+
 }
