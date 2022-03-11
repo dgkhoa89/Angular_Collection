@@ -19,7 +19,7 @@
 
     <hr>
 
-    <h3>Filter pipe</h3>
+    <h3>Filter list by pipe</h3>
     <table class="table table-condensed table-hover">
         <thead>
             <tr>
@@ -47,5 +47,29 @@
             </tr>
         </tbody>
     </table>
+
+    <hr>
+    <h3>Sort an array by pipe</h3>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>input</th>
+                <th>output</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div>
+                        <button (click)="setSortType(1)" [style.margin.px]="10" type="button" class="btn btn-danger">Ascending</button>
+                        <button (click)="setSortType(-1)" [style.margin.px]="10" type="button" class="btn btn-success">Descending</button> {{sortFlag}}
+                    </div>
+                    {{numbers}}
+                </td>
+                <td>{{numbers | sortNumber: sortFlag}}</td>
+            </tr>
+        </tbody>
+    </table>
+
 
 </div>
