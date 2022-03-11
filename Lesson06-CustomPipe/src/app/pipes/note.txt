@@ -1,0 +1,2 @@
+ng g pipe my-pipe-name
+--> terminal command to create pipe
