@@ -56,6 +56,20 @@
             <td>{{names}}</td>
             <td>{{names | slice:1:2}}</td>
           </tr>
+          <tr>
+            <td>8</td>
+            <td>Currency</td>
+            <td>{{amountMoney}}</td>
+            <td>{{amountMoney | currency : 'USD ': true: '1.0-3'}}</td>
+            <!-- iso 4217 -->
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>Date format</td>
+            <td>{{today}}</td>
+            <td>{{today | date:'EEEE d/M/y h:m:s a'}}</td>
+            <!-- iso 4217 -->
+          </tr>
         </tbody>
       </table>
       
