@@ -27,10 +27,34 @@
             <td>{{content | lowercase}}</td>
           </tr>
           <tr>
-            <td>1</td>
+            <td>3</td>
             <td>Titlecase</td>
             <td>{{content}}</td>
             <td>{{content | titlecase}}</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Slice</td>
+            <td>{{title}}</td>
+            <td>{{title | slice:3:(title.length-2)}}</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Decimal - number</td>
+            <td>{{amount}}</td>
+            <td>{{amount | number:'1.10-20' }}</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Percent</td>
+            <td>{{amount}}</td>
+            <td>{{amount/100 | percent:'1.0-2' }}</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Slice array</td>
+            <td>{{names}}</td>
+            <td>{{names | slice:1:2}}</td>
           </tr>
         </tbody>
       </table>
