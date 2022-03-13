@@ -68,6 +68,13 @@
                 </td>
                 <td>{{numbers | sortNumber: sortFlag}}</td>
             </tr>
+            <tr>
+                <td>
+                    Input your name
+                    <input type="text" [(ngModel)]="name">
+                </td>
+                <td>{{name | capitalize}}</td>
+            </tr>
         </tbody>
     </table>
 

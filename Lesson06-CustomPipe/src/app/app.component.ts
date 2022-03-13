@@ -49,8 +49,10 @@ export class AppComponent {
 
     public numbers: number[] = [2, 4, 8, 3, 1, 7];
     public sortFlag: number = 1;
-    setSortType(value:number){
+    setSortType(value: number): void {
         this.sortFlag = value;
     }
+
+    public name : string = 'Lương Định Của';
 
 }

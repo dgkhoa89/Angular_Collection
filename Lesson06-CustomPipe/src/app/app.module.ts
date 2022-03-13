@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { FormatDataPipe } from './pipes/format-data.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
 import { SortNumberPipe } from './pipes/sort-number.pipe';
+import { CapitalizePipe } from './pipes/capitalize.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormatDataPipe,
     FilterPipe,
-    SortNumberPipe
+    SortNumberPipe,
+    CapitalizePipe
   ],
   imports: [
     BrowserModule,
