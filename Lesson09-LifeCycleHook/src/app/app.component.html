@@ -1,0 +1,20 @@
+<div class="container" [style.margin-top.px]="30">
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Life cycle hook</h3>
+                </div>
+                <div class="panel-body" *ngIf="isShowing">
+                    <app-life-cycle-hook></app-life-cycle-hook>
+                </div>
+
+                <button type="button" class="btn btn-success" (click)="onToggle()">Toggle</button>
+
+            </div>
+        </div>
+    </div>
+
+</div>
