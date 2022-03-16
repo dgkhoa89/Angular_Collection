@@ -5,13 +5,27 @@
 
             <div class="panel panel-danger">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Life cycle hook</h3>
+                    <h3 class="panel-title">Parent</h3>
                 </div>
                 <div class="panel-body" *ngIf="isShowing">
-                    <app-life-cycle-hook></app-life-cycle-hook>
+                    <!-- child component -->
+                    <app-life-cycle-hook (newItemEvent)="updateCount($event)" [sumValue]="sumValueParent"></app-life-cycle-hook>
+
+                    <hr>
+                    <span>from here to end come from parent</span>
+                    <hr>
+                    <button type="button" class="btn btn-success" (click)="onToggle()">Toggle</button>
+
+                    <h4>First number</h4>
+                    <input type="number" class="form-control" #a>
+                    <h4>Second number</h4>
+                    <input type="number" class="form-control" #b>
+
+                    <button type="button" class="btn btn-success" (click)="onSummary(a.value, b.value)">Summary</button>
+
                 </div>
 
-                <button type="button" class="btn btn-success" (click)="onToggle()">Toggle</button>
+
 
             </div>
         </div>
