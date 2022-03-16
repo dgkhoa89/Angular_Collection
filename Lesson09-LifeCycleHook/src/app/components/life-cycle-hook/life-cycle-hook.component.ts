@@ -1,4 +1,4 @@
-import { Component, OnInit,Input, OnChanges,Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, Output, EventEmitter, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-life-cycle-hook',
@@ -7,29 +7,31 @@ import { Component, OnInit,Input, OnChanges,Output, EventEmitter } from '@angula
 })
 export class LifeCycleHookComponent implements OnInit {
 
-  title:string='Child'
+  title: string = 'Child'
 
-  @Input() sumValue:number = 0;
+  @Input() sumValue: number = 0;
 
-  @Output() newItemEvent  = new EventEmitter<any>();
-  addNewItem(value:any) {
+  @Output() newItemEvent = new EventEmitter<any>();
+  addNewItem(value: any) {
     this.newItemEvent.emit(value);
   }
 
   countValue = 0;
 
-  constructor() { 
+  constructor() {
     console.log('constructor ....');
   }
 
   ngOnInit(): void {
     console.log('ng Oninit - .....');
-    
+
   }
-  ngOnChanges(): void {
+  ngOnChanges(simpleChanges: SimpleChanges): void {
     this.countValue++;
     console.log('child - on change- count is: ' + this.countValue);
     this.addNewItem(this.countValue);
+    console.log(simpleChanges);
+    
   }
   ngOnDestroy(): void {
     console.log('ng OnDestroy - .....');
