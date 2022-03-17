@@ -1,0 +1,22 @@
+<div class="panel panel-success">
+    <div class="panel-heading">
+        <h3 class="panel-title">Other Life cycle hook</h3>
+    </div>
+    <div class="panel-body">
+        <h3>Learn about ngContent</h3>
+        <hr>
+        <ng-content></ng-content>
+        <hr>
+        <ng-content select=".subTitle"></ng-content>
+        <hr>
+        <ng-content select="#index"></ng-content>
+        <hr>
+        <ng-content select="h1"></ng-content>
+        <hr>
+        <ng-content select="[myAttr]"></ng-content>
+        <hr>
+        <ng-content select="[course='angular']"></ng-content>
+        <hr>
+        <ng-content select="[att_1][att_2]"></ng-content>
+    </div>
+</div>
