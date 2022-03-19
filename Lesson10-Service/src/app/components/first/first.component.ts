@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoggingService } from 'src/app/services/logging.service';
 
 @Component({
   selector: 'app-first',
@@ -7,16 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FirstComponent implements OnInit {
 
-  constructor() { }
+  //inject service to this class
+  constructor(
+    private _loggingService: LoggingService
+  ) { }
 
   ngOnInit(): void {
   }
 
-  onClick(){
-    this.logging();
+  onClick() {
+    this._loggingService.logging();
   }
 
-  logging():void{
-    console.log('Hello');
-  }
+
 }
