@@ -23,5 +23,4 @@ export class SortProductPipe implements PipeTransform {
         }
         return products;
     }
-
 }
