@@ -5,6 +5,9 @@ import { AppComponent } from './app.component';
 import { FirstComponent } from './components/first/first.component';
 import { SecondComponent } from './components/second/second.component';
 
+//services
+import {LoggingService} from './services/logging.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +17,9 @@ import { SecondComponent } from './components/second/second.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    LoggingService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
