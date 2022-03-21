@@ -1,0 +1,6 @@
+Routing is used to route pages
+allow not reload some part in app
+
+require:
+1- index.html : base="/href"
+2- directive <router-outlet>
