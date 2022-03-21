@@ -13,6 +13,11 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 
 const appRoutes: Routes = [
   {
+    path:'',
+    redirectTo:'index',
+    pathMatch:'full'
+  },
+  {
     path: 'about',
     component: AboutComponent
   },
@@ -21,7 +26,7 @@ const appRoutes: Routes = [
     component: ContactComponent
   },
   {
-    path: '',
+    path: 'index',
     component: HomeComponent
   },
   {
