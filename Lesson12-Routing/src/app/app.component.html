@@ -18,13 +18,15 @@
 </div>
 
 <hr>
-
+<h3>switch page by button and routerlink</h3>
 <button type="button" class="btn btn-primary" routerLink="/index">Home</button>
-
 <button type="button" class="btn btn-default" routerLink="/contact">Contact</button>
-
 <button type="button" class="btn btn-warning" routerLink="/about">About</button>
-
+<hr>
+<h3>switch page by event binding</h3>
+<button type="button" class="btn btn-primary" (click)="navigate('index')">Home</button>
+<button type="button" class="btn btn-default" (click)="navigate('contact')">Contact</button>
+<button type="button" class="btn btn-warning" (click)="navigate('about')">About</button>
 
 
 <app-footer></app-footer>>
