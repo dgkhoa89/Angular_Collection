@@ -8,24 +8,30 @@ import { ProductsComponent } from "./products/products.component"
 
 export const appRoutes: Routes = [
     {
-      path:'',
-      redirectTo:'index',
-      pathMatch:'full'
+        path: '',
+        redirectTo: 'index',
+        pathMatch: 'full'
     },
     {
-      path: 'about',
-      component: AboutComponent
+        path: 'about',
+        component: AboutComponent
+    },
+
+    {
+        path: 'product',
+        component: ProductsComponent
+    },
+
+    {
+        path: 'contact',
+        component: ContactComponent
     },
     {
-      path: 'contact',
-      component: ContactComponent
+        path: 'index',
+        component: HomeComponent
     },
     {
-      path: 'index',
-      component: HomeComponent
-    },
-    {
-      path: '**',
-      component: NotFoundComponent
+        path: '**',
+        component: NotFoundComponent
     }
-  ]
+]
