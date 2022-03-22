@@ -12,8 +12,11 @@ import { HomeComponent } from './components/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ProductsComponent } from './products/products.component';
 
+//routes
 import { appRoutes } from './app.routes';
 
+//service
+import { ProductService } from './services/product.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,9 @@ import { appRoutes } from './app.routes';
     RouterModule.forRoot(appRoutes)
 
   ],
-  providers: [],
+  providers: [
+    ProductService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
