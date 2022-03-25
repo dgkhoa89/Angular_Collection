@@ -17,10 +17,20 @@ export class ProductDetailComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    // this.handleBySnapshot();
+    this.handleByParams();
+  }
+
+  handleBySnapshot(){
     let id = (+this.activatedRoute.snapshot.params['id']);
     let productById = this.productService.getProductById(id);
     this.product = productById;
-    console.log(this.product);
   }
 
+  handleByParams(){
+    this.activatedRoute.params.subscribe(data=>{
+      let id = +data['id'];
+      this.product = this.productService.getProductById(id);
+    })
+  }
 }

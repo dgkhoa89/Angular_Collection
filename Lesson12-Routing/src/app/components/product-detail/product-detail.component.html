@@ -1,4 +1,19 @@
-<h3>ID: {{product.id}}</h3>
-<h3>NAME: {{product.name}}</h3>
-<h3>PRICE: {{product.price}}</h3>
-<h3>STATUS: {{product.status}}</h3>
+<ng-container *ngIf="product; else noProduct">
+    <h3>ID: {{product.id}}</h3>
+    <h3>NAME: {{product.name}}</h3>
+    <h3>PRICE: {{product.price}}</h3>
+    <h3>STATUS: {{product.status}}</h3>
+
+    <h2>
+        <a [routerLink]="['/product']">All products</a>
+    </h2>
+    <h4><a [routerLink]="['/product',1]">No. 1</a></h4>
+    <h4><a [routerLink]="['/product',2]">No. 2</a></h4>
+    <h4><a [routerLink]="['/product',3]">No. 3</a></h4>
+
+</ng-container>
+
+<ng-template #noProduct>
+    <h4>product is not found</h4>
+
+</ng-template>
