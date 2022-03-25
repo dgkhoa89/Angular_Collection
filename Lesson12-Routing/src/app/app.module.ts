@@ -17,6 +17,7 @@ import { appRoutes } from './app.routes';
 
 //service
 import { ProductService } from './services/product.service';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ProductService } from './services/product.service';
     FooterComponent,
     HomeComponent,
     NotFoundComponent,
-    ProductsComponent
+    ProductsComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,

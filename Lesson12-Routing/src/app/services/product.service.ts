@@ -19,13 +19,14 @@ export class ProductService {
   }
 
   getProductById(id : number) {
-      this.products.forEach(element => {
-        if (element.id === id) {
-          return element;
+    let productById;
+    for (let i = 0; i < this.products.length; i++) {
+        if(id === this.products[i].id){
+          productById = this.products[i];
+          break;
         }
-      });
-
-
+      }
+      return productById;
   }
 
 }
